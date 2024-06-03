@@ -14,6 +14,7 @@ provider "docker" {
 resource "docker_image" "nginx" {
   name         = "nginx"
   keep_locally = false
+  force_remove = true
 }
 
 resource "docker_container" "nginx" {
